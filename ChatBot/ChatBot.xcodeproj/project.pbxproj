@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F44CCC32BB29450005BC09A /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		B4B3E2B92B42D1BB00818B3C /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +36,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F44CCC02BB29360005BC09A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7F44CCC12BB29376005BC09A /* AppDelegate */,
+				B4B3E2C52B42D1BC00818B3C /* Assets.xcassets */,
+				B4B3E2C72B42D1BC00818B3C /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7F44CCC12BB29376005BC09A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */,
+				B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		B4B3E2B02B42D1BB00818B3C = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +74,10 @@
 		B4B3E2BB2B42D1BB00818B3C /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */,
-				B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */,
+				7F44CCC02BB29360005BC09A /* App */,
 				B4B3E2C02B42D1BB00818B3C /* ViewController.swift */,
-				B4B3E2C52B42D1BC00818B3C /* Assets.xcassets */,
-				B4B3E2C72B42D1BC00818B3C /* LaunchScreen.storyboard */,
 				B4B3E2CA2B42D1BC00818B3C /* Info.plist */,
+				7F44CCC32BB29450005BC09A /* Secrets.xcconfig */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -275,6 +293,7 @@
 		};
 		B4B3E2CE2B42D1BC00818B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F44CCC32BB29450005BC09A /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +322,7 @@
 		};
 		B4B3E2CF2B42D1BC00818B3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F44CCC32BB29450005BC09A /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
