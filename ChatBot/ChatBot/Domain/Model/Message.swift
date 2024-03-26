@@ -5,11 +5,11 @@
 //  Created by Doyoung An on 3/26/24.
 //
 
-enum MessageRole {
+enum MessageRole: Codable {
     case system, user, assistant, tool
 }
 
-struct Message {
+struct Message: Codable {
     let role: MessageRole
     let content: String
 }

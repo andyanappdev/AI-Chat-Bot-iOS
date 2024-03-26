@@ -5,7 +5,7 @@
 //  Created by Doyoung An on 3/27/24.
 //
 
-class Conversation {
+class Conversation: Encodable {
     private var messages: [Message]
     
     init(messages: [Message]) {
