@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F44CCC62BB2B6B4005BC09A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F44CCC52BB2B6B4005BC09A /* Message.swift */; };
 		7F5E8FBB2BB31842007C34D8 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E8FBA2BB31842007C34D8 /* RequestBody.swift */; };
+		7F5E8FBD2BB32D1D007C34D8 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E8FBC2BB32D1D007C34D8 /* Conversation.swift */; };
 		B4B3E2BD2B42D1BB00818B3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */; };
 		B4B3E2BF2B42D1BB00818B3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */; };
 		B4B3E2C12B42D1BB00818B3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2C02B42D1BB00818B3C /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		7F44CCC32BB29450005BC09A /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		7F44CCC52BB2B6B4005BC09A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7F5E8FBA2BB31842007C34D8 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
+		7F5E8FBC2BB32D1D007C34D8 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		B4B3E2B92B42D1BB00818B3C /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			children = (
 				7F44CCC52BB2B6B4005BC09A /* Message.swift */,
 				7F5E8FBA2BB31842007C34D8 /* RequestBody.swift */,
+				7F5E8FBC2BB32D1D007C34D8 /* Conversation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5E8FBD2BB32D1D007C34D8 /* Conversation.swift in Sources */,
 				B4B3E2C12B42D1BB00818B3C /* ViewController.swift in Sources */,
 				7F44CCC62BB2B6B4005BC09A /* Message.swift in Sources */,
 				7F5E8FBB2BB31842007C34D8 /* RequestBody.swift in Sources */,
