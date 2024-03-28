@@ -1,6 +1,7 @@
 import Foundation
 
 class OpenAIService {
+    
     func sendRequestToOpenAI(_ messages: [RequestMessageModel], completion: @escaping (Result<[Message], Error>) -> Void) {
         let endpoint = OpenAIEndPoint.chatCompletionsBaseURL
         var request = URLRequest(url: endpoint.url)
@@ -28,19 +29,16 @@ class OpenAIService {
             
             do {
                 let responseDTO = try JSONDecoder().decode(OpenAICheatResponseDTO.self, from: data)
-                print(responseDTO.choices.self)
                 // DTO에서 Model로 변환
                 let messages = responseDTO.choices.compactMap { choice -> Message? in
                     guard let messageContent = choice.message?.content, let messageRole = choice.message?.role else { return nil }
                     return Message(role: (MessageRole(rawValue: messageRole) ?? .assistant).rawValue, content: messageContent)
-                    
                 }
                 completion(.success(messages))
             } catch {
                 completion(.failure(error))
             }
         }
-        
         task.resume()
     }
 }

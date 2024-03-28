@@ -6,8 +6,8 @@
 //
 import Foundation
 class ChatViewModel {
-    private let repository: MessageRepository
-    private let apiService: OpenAIService
+     let repository: MessageRepository
+     let apiService: OpenAIService
 
     init(repository: MessageRepository, apiService: OpenAIService) {
         self.repository = repository
