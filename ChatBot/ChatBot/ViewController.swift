@@ -8,16 +8,15 @@ import UIKit
 
 class ViewController: UIViewController {
     private var viewModel: ChatViewModel!
-     var repo: MessageRepository!
+    private var repo: MessageRepository!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        let messageRepository = MessageRepository()
+        repo = MessageRepository()
         let openAIService = OpenAIService()
-        viewModel = ChatViewModel(repository: messageRepository, apiService: openAIService)
-        
+        viewModel = ChatViewModel(repository: repo, apiService: openAIService)
         setupUI()
         setupUI2()
         setupUI3()
@@ -56,7 +55,7 @@ class ViewController: UIViewController {
     private func setupUI3() {
         // 메시지 전송 버튼 생성 및 레이아웃 설정
         let sendButton = UIButton(type: .system)
-        sendButton.setTitle("printRepositoryContents", for: .normal)
+        sendButton.setTitle("clearRepo", for: .normal)
         sendButton.addTarget(self, action: #selector(messageClear), for: .touchUpInside)
         
         sendButton.translatesAutoresizingMaskIntoConstraints = false
@@ -69,13 +68,14 @@ class ViewController: UIViewController {
     }
     
     @objc private func sendMessage() {
-        //검증을 위한 코드
-        let message = "내 꿈은 다음달 4월 취직"
-        
+        let message = "IOS 개발자가 되기 위한 구체적인 계획"
+        DispatchQueue.main.async {
+            self.viewModel.processUserMessage(message)
+        }
     }
     
    @objc func printMessageRepositoryContents() {
-        let messages = viewModel.repository.getMessages()
+       let messages = repo.getMessages()
         print("""
         😃😃😃😃😃😃😃😃😃😃😃😃😃😃😃😃😃
         \(messages)
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
     }
     
     @objc func messageClear() {
-        viewModel.repository.clearMessages()
+        repo.clearStorage()
      }
 
 }

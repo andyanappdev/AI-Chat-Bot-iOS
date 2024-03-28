@@ -8,8 +8,8 @@
 import Foundation
 
 struct OpenAIEndPoint {
-    let path: String
     
+    let path: String
     var url: URL {
         var components = URLComponents()
         components.scheme = "https"

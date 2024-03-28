@@ -21,7 +21,7 @@ var messagesStorage: [Message] = []
    }
    
    // 모든 메시지를 삭제합니다.
-   func clearMessages() {
+   func clearStorage() {
        messagesStorage.removeAll()
    }
 }

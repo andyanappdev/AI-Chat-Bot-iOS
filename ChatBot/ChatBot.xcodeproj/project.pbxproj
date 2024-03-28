@@ -11,7 +11,7 @@
 		707DF60B2BB2916E00139420 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF60A2BB2916E00139420 /* APIKeyManager.swift */; };
 		707DF6112BB2A0C400139420 /* OpenAICheatResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */; };
 		707DF6192BB2B95100139420 /* RequestMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF6182BB2B95100139420 /* RequestMessageModel.swift */; };
-		707DF61E2BB2BAF900139420 /* RequestMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */; };
+		707DF61E2BB2BAF900139420 /* MessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF61D2BB2BAF900139420 /* MessageRepository.swift */; };
 		707DF6202BB2FBE000139420 /* ResponseMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */; };
 		70E4838F2BB5064C00931F01 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4838E2BB5064C00931F01 /* ChatViewModel.swift */; };
 		70E483912BB506E500931F01 /* OpenAINetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E483902BB506E500931F01 /* OpenAINetworkService.swift */; };
@@ -28,7 +28,7 @@
 		707DF60A2BB2916E00139420 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 		707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICheatResponseDTO.swift; sourceTree = "<group>"; };
 		707DF6182BB2B95100139420 /* RequestMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageModel.swift; sourceTree = "<group>"; };
-		707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageManager.swift; sourceTree = "<group>"; };
+		707DF61D2BB2BAF900139420 /* MessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRepository.swift; sourceTree = "<group>"; };
 		707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMessageModel.swift; sourceTree = "<group>"; };
 		70E4838E2BB5064C00931F01 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		70E483902BB506E500931F01 /* OpenAINetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworkService.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		707B516F2BB400EE002F1092 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */,
+				707DF61D2BB2BAF900139420 /* MessageRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				707B51492BB3B6CB002F1092 /* OpenAIEndPoint.swift in Sources */,
 				707DF6192BB2B95100139420 /* RequestMessageModel.swift in Sources */,
 				707DF60B2BB2916E00139420 /* APIKeyManager.swift in Sources */,
-				707DF61E2BB2BAF900139420 /* RequestMessageManager.swift in Sources */,
+				707DF61E2BB2BAF900139420 /* MessageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
