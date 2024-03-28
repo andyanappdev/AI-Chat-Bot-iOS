@@ -8,5 +8,5 @@
 import Foundation
 
 struct APIKeyManager {
-   static let APIKey = Bundle.main.infoDictionary?["OpenAIKey"] as! String
+   static let openAIAPIKey = Bundle.main.infoDictionary?["OpenAIKey"] as! String
 }

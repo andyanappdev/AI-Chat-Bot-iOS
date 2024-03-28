@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		707DF6082BB286EF00139420 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF6072BB286EF00139420 /* NetworkManager.swift */; };
+		707B51492BB3B6CB002F1092 /* OpenAIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B51482BB3B6CB002F1092 /* OpenAIEndPoint.swift */; };
 		707DF60B2BB2916E00139420 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF60A2BB2916E00139420 /* APIKeyManager.swift */; };
+		707DF6112BB2A0C400139420 /* OpenAICheatResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */; };
+		707DF6192BB2B95100139420 /* RequestMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF6182BB2B95100139420 /* RequestMessageModel.swift */; };
+		707DF61E2BB2BAF900139420 /* RequestMessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */; };
+		707DF6202BB2FBE000139420 /* ResponseMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */; };
+		70E4838F2BB5064C00931F01 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4838E2BB5064C00931F01 /* ChatViewModel.swift */; };
+		70E483912BB506E500931F01 /* OpenAINetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E483902BB506E500931F01 /* OpenAINetworkService.swift */; };
 		B4B3E2BD2B42D1BB00818B3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */; };
 		B4B3E2BF2B42D1BB00818B3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */; };
 		B4B3E2C12B42D1BB00818B3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E2C02B42D1BB00818B3C /* ViewController.swift */; };
@@ -17,9 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		707DF6072BB286EF00139420 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		707B51482BB3B6CB002F1092 /* OpenAIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIEndPoint.swift; sourceTree = "<group>"; };
 		707DF6092BB28C9500139420 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		707DF60A2BB2916E00139420 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
+		707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICheatResponseDTO.swift; sourceTree = "<group>"; };
+		707DF6182BB2B95100139420 /* RequestMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageModel.swift; sourceTree = "<group>"; };
+		707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageManager.swift; sourceTree = "<group>"; };
+		707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMessageModel.swift; sourceTree = "<group>"; };
+		70E4838E2BB5064C00931F01 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		70E483902BB506E500931F01 /* OpenAINetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworkService.swift; sourceTree = "<group>"; };
 		B4B3E2B92B42D1BB00818B3C /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +52,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		707B516A2BB3FBB2002F1092 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				707B516F2BB400EE002F1092 /* Repository */,
+				707B516E2BB400D4002F1092 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		707B516D2BB4007F002F1092 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				707B51482BB3B6CB002F1092 /* OpenAIEndPoint.swift */,
+				707DF60A2BB2916E00139420 /* APIKeyManager.swift */,
+				70E483902BB506E500931F01 /* OpenAINetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		707B516E2BB400D4002F1092 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */,
+				707DF6182BB2B95100139420 /* RequestMessageModel.swift */,
+				707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */,
+				70E4838E2BB5064C00931F01 /* ChatViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		707B516F2BB400EE002F1092 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				707DF61D2BB2BAF900139420 /* RequestMessageManager.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		707DF61A2BB2B98700139420 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */,
+				B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		707DF61C2BB2B9BB00139420 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B4B3E2C52B42D1BC00818B3C /* Assets.xcassets */,
+				B4B3E2C72B42D1BC00818B3C /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		70E483922BB54C8500931F01 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B4B3E2B02B42D1BB00818B3C = {
 			isa = PBXGroup;
 			children = (
@@ -59,15 +134,14 @@
 		B4B3E2BB2B42D1BB00818B3C /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */,
-				B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */,
+				70E483922BB54C8500931F01 /* New Group */,
+				707DF61C2BB2B9BB00139420 /* Assets */,
+				707DF61A2BB2B98700139420 /* App */,
+				707B516A2BB3FBB2002F1092 /* Data */,
+				707B516D2BB4007F002F1092 /* Network */,
 				B4B3E2C02B42D1BB00818B3C /* ViewController.swift */,
-				707DF60A2BB2916E00139420 /* APIKeyManager.swift */,
-				707DF6072BB286EF00139420 /* NetworkManager.swift */,
-				707DF6092BB28C9500139420 /* Config.xcconfig */,
-				B4B3E2C52B42D1BC00818B3C /* Assets.xcassets */,
-				B4B3E2C72B42D1BC00818B3C /* LaunchScreen.storyboard */,
 				B4B3E2CA2B42D1BC00818B3C /* Info.plist */,
+				707DF6092BB28C9500139420 /* Config.xcconfig */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -142,11 +216,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707DF6082BB286EF00139420 /* NetworkManager.swift in Sources */,
+				707DF6112BB2A0C400139420 /* OpenAICheatResponseDTO.swift in Sources */,
 				B4B3E2C12B42D1BB00818B3C /* ViewController.swift in Sources */,
 				B4B3E2BD2B42D1BB00818B3C /* AppDelegate.swift in Sources */,
+				70E4838F2BB5064C00931F01 /* ChatViewModel.swift in Sources */,
+				70E483912BB506E500931F01 /* OpenAINetworkService.swift in Sources */,
 				B4B3E2BF2B42D1BB00818B3C /* SceneDelegate.swift in Sources */,
+				707DF6202BB2FBE000139420 /* ResponseMessageModel.swift in Sources */,
+				707B51492BB3B6CB002F1092 /* OpenAIEndPoint.swift in Sources */,
+				707DF6192BB2B95100139420 /* RequestMessageModel.swift in Sources */,
 				707DF60B2BB2916E00139420 /* APIKeyManager.swift in Sources */,
+				707DF61E2BB2BAF900139420 /* RequestMessageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
