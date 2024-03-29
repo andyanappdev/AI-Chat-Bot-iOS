@@ -24,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		707B51482BB3B6CB002F1092 /* OpenAIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIEndPoint.swift; sourceTree = "<group>"; };
-		707DF6092BB28C9500139420 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		707DF60A2BB2916E00139420 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 		707DF6102BB2A0C400139420 /* OpenAICheatResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICheatResponseDTO.swift; sourceTree = "<group>"; };
 		707DF6182BB2B95100139420 /* RequestMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageModel.swift; sourceTree = "<group>"; };
@@ -32,6 +31,7 @@
 		707DF61F2BB2FBE000139420 /* ResponseMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseMessageModel.swift; sourceTree = "<group>"; };
 		70E4838E2BB5064C00931F01 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		70E483902BB506E500931F01 /* OpenAINetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAINetworkService.swift; sourceTree = "<group>"; };
+		70E483AF2BB65A4A00931F01 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		B4B3E2B92B42D1BB00818B3C /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B3E2BC2B42D1BB00818B3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4B3E2BE2B42D1BB00818B3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,13 +108,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		70E483922BB54C8500931F01 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		B4B3E2B02B42D1BB00818B3C = {
 			isa = PBXGroup;
 			children = (
@@ -134,14 +127,13 @@
 		B4B3E2BB2B42D1BB00818B3C /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				70E483922BB54C8500931F01 /* New Group */,
 				707DF61C2BB2B9BB00139420 /* Assets */,
 				707DF61A2BB2B98700139420 /* App */,
 				707B516A2BB3FBB2002F1092 /* Data */,
 				707B516D2BB4007F002F1092 /* Network */,
 				B4B3E2C02B42D1BB00818B3C /* ViewController.swift */,
 				B4B3E2CA2B42D1BC00818B3C /* Info.plist */,
-				707DF6092BB28C9500139420 /* Config.xcconfig */,
+				70E483AF2BB65A4A00931F01 /* Config.xcconfig */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -246,7 +238,7 @@
 /* Begin XCBuildConfiguration section */
 		B4B3E2CB2B42D1BC00818B3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 707DF6092BB28C9500139420 /* Config.xcconfig */;
+			baseConfigurationReference = 70E483AF2BB65A4A00931F01 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -310,7 +302,7 @@
 		};
 		B4B3E2CC2B42D1BC00818B3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 707DF6092BB28C9500139420 /* Config.xcconfig */;
+			baseConfigurationReference = 70E483AF2BB65A4A00931F01 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
