@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let repo = MessageRepository()
         let apiService = OpenAIService()
         let viewModel = ChatViewModel(repository: repo, apiService: apiService)
-        let rootViewController = ChatbotMainViewController(viewModel: viewModel, repo: repo, apiService: apiService)
+        let rootViewController = DetailChatViewController(repo: repo, viewModel: viewModel, apiService: apiService)
         
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
