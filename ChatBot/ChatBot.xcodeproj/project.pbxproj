@@ -57,11 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70A610462BBFBE74009B08ED /* New Group */ = {
+		70A610472BBFBF62009B08ED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4B3E2C02B42D1BB00818B3C /* ChatbotMainViewController.swift */,
+				70A610442BBFBE69009B08ED /* ChatViewMessageCollectionViewCell.swift */,
 			);
-			path = "New Group";
+			path = View;
 			sourceTree = "<group>";
 		};
 		70E483A12BB5AB3400931F01 /* Network */ = {
@@ -139,15 +141,13 @@
 		B4B3E2BB2B42D1BB00818B3C /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				70A610462BBFBE74009B08ED /* New Group */,
 				70E483A52BB5AB6400931F01 /* Assets */,
 				70E483A42BB5AB5D00931F01 /* App */,
 				70E483AC2BB5AE7600931F01 /* ViewModel */,
 				70E483A32BB5AB3900931F01 /* Model */,
 				70E483A22BB5AB3700931F01 /* Repository */,
 				70E483A12BB5AB3400931F01 /* Network */,
-				B4B3E2C02B42D1BB00818B3C /* ChatbotMainViewController.swift */,
-				70A610442BBFBE69009B08ED /* ChatViewMessageCollectionViewCell.swift */,
+				70A610472BBFBF62009B08ED /* View */,
 				B4B3E2CA2B42D1BC00818B3C /* Info.plist */,
 			);
 			path = ChatBot;
