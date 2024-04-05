@@ -11,6 +11,7 @@ class MessageRepository {
     private var messagesStorage: [RequestMessageModel] = []
     private let repoQueue = DispatchQueue(label: "repoQueue")
     
+    
     func addMessage(_ message: RequestMessageModel) {
         repoQueue.async {
             self.messagesStorage.append(message)
