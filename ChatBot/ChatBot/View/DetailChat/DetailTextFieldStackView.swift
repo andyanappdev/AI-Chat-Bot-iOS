@@ -11,6 +11,8 @@ class DetailTextFieldStackView: UIStackView {
     private var UserinputTextField: UITextField = {
        let textField = UITextField()
         textField.borderStyle = .roundedRect
+        textField.layer.borderWidth = 0.1
+        textField.layer.cornerRadius = 10
         return textField
     }()
     
@@ -18,13 +20,19 @@ class DetailTextFieldStackView: UIStackView {
         let button = UIButton()
         let image = UIImage(systemName: "arrowshape.up")
         button.setImage(image, for: .normal)
-        button.backgroundColor = .blue
-        button.layer.cornerRadius = button.bounds.width / 2
+        button.backgroundColor = .black
         return button
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupStackView()
+        configureStackView()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        configureLayoutSubviews()
     }
     
     required init(coder: NSCoder) {
@@ -38,7 +46,6 @@ class DetailTextFieldStackView: UIStackView {
         self.spacing = 5
         self.distribution = .fill
         self.alignment = .center
-   
     }
     
     private func configureStackView() {
@@ -46,9 +53,12 @@ class DetailTextFieldStackView: UIStackView {
         self.addArrangedSubview(doneButton)
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            doneButton.widthAnchor.constraint(equalToConstant: 50),
-            doneButton.heightAnchor.constraint(equalTo: doneButton.widthAnchor)
+            doneButton.heightAnchor.constraint(equalTo: UserinputTextField.heightAnchor),
+            doneButton.widthAnchor.constraint(equalTo: doneButton.heightAnchor)
         ])
     }
     
+    private func configureLayoutSubviews() {
+        doneButton.layer.cornerRadius = doneButton.frame.height / 2
+    }
 }
