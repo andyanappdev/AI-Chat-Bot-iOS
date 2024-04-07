@@ -11,6 +11,7 @@
 		70A610432BBE6061009B08ED /* NetworkErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A610422BBE6061009B08ED /* NetworkErrorEnum.swift */; };
 		70A610452BBFBE69009B08ED /* DetailChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A610442BBFBE69009B08ED /* DetailChatCollectionViewCell.swift */; };
 		70A6104E2BBFCF7B009B08ED /* DetailChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A6104D2BBFCF7B009B08ED /* DetailChatViewController.swift */; };
+		70A610562BBFDCB3009B08ED /* DetailTextFieldStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A610552BBFDCB3009B08ED /* DetailTextFieldStackView.swift */; };
 		70E4839A2BB5A88000931F01 /* OpenAICheatResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E483992BB5A88000931F01 /* OpenAICheatResponseDTO.swift */; };
 		70E4839C2BB5A88900931F01 /* RequestMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4839B2BB5A88900931F01 /* RequestMessageModel.swift */; };
 		70E483A02BB5A8E700931F01 /* MessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4839F2BB5A8E700931F01 /* MessageRepository.swift */; };
@@ -30,6 +31,7 @@
 		70A610422BBE6061009B08ED /* NetworkErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorEnum.swift; sourceTree = "<group>"; };
 		70A610442BBFBE69009B08ED /* DetailChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		70A6104D2BBFCF7B009B08ED /* DetailChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChatViewController.swift; sourceTree = "<group>"; };
+		70A610552BBFDCB3009B08ED /* DetailTextFieldStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTextFieldStackView.swift; sourceTree = "<group>"; };
 		70E483992BB5A88000931F01 /* OpenAICheatResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICheatResponseDTO.swift; sourceTree = "<group>"; };
 		70E4839B2BB5A88900931F01 /* RequestMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageModel.swift; sourceTree = "<group>"; };
 		70E4839F2BB5A8E700931F01 /* MessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRepository.swift; sourceTree = "<group>"; };
@@ -60,18 +62,19 @@
 		70A610472BBFBF62009B08ED /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70A610482BBFC0D0009B08ED /* ChatList */,
-				70A610442BBFBE69009B08ED /* DetailChatCollectionViewCell.swift */,
+				70A610482BBFC0D0009B08ED /* DetailChat */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		70A610482BBFC0D0009B08ED /* ChatList */ = {
+		70A610482BBFC0D0009B08ED /* DetailChat */ = {
 			isa = PBXGroup;
 			children = (
+				70A610442BBFBE69009B08ED /* DetailChatCollectionViewCell.swift */,
+				70A610552BBFDCB3009B08ED /* DetailTextFieldStackView.swift */,
 				70A6104D2BBFCF7B009B08ED /* DetailChatViewController.swift */,
 			);
-			path = ChatList;
+			path = DetailChat;
 			sourceTree = "<group>";
 		};
 		70E483A12BB5AB3400931F01 /* Network */ = {
@@ -240,6 +243,7 @@
 				70E483A72BB5ABBA00931F01 /* APIKeyManager.swift in Sources */,
 				70A610412BBE6034009B08ED /* URLRequestBuilder.swift in Sources */,
 				70E483A02BB5A8E700931F01 /* MessageRepository.swift in Sources */,
+				70A610562BBFDCB3009B08ED /* DetailTextFieldStackView.swift in Sources */,
 				70E4839A2BB5A88000931F01 /* OpenAICheatResponseDTO.swift in Sources */,
 				70E483AB2BB5AC7900931F01 /* OpenAIService.swift in Sources */,
 				70E483A92BB5ABC400931F01 /* OpenAIEndPoint.swift in Sources */,

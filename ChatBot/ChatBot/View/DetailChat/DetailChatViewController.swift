@@ -7,10 +7,16 @@
 
 import UIKit
 
-class DetailChatViewController: UIViewController {
+final class DetailChatViewController: UIViewController {
     var repo: MessageRepository
     var viewModel: ChatViewModel
     var apiService: OpenAIService
+    
+    lazy var inputTextField: UITextField = {
+        let textField = UITextField()
+        
+        return textField
+    }()
     
     init(repo: MessageRepository, viewModel: ChatViewModel, apiService: OpenAIService) {
         self.repo = repo
@@ -29,7 +35,16 @@ class DetailChatViewController: UIViewController {
         
     }
     
+}
 
-
+extension DetailChatViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 }
 

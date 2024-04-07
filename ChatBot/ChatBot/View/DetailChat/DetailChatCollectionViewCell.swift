@@ -36,7 +36,7 @@ class DetailChatCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-     func configure(with content: RequestMessageModel) {
+    private func configure(with content: RequestMessageModel) {
          messageLabel.text = content.content
          backgroundColor = content.role == .user ? .systemBlue : .gray
          messageLabel.textAlignment = content.role == .user ? .right : .left
