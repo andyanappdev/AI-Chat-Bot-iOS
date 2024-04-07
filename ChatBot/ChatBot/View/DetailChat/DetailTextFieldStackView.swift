@@ -8,12 +8,13 @@
 import UIKit
 
 class DetailTextFieldStackView: UIStackView {
-    private var UserinputTextField: UITextField = {
-       let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.layer.borderWidth = 0.1
-        textField.layer.cornerRadius = 10
-        return textField
+    var userInputTextView: UITextView = {
+        let textView = UITextView()
+        textView.font = UIFont.systemFont(ofSize: 16)
+        textView.layer.borderWidth = 0.1
+        textView.layer.cornerRadius = 10
+        textView.isScrollEnabled = false
+        return textView
     }()
     
     private var doneButton: UIButton = {
@@ -27,7 +28,7 @@ class DetailTextFieldStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupStackView()
-        configureStackView()
+        
     }
     
     override func layoutSubviews() {
@@ -39,22 +40,22 @@ class DetailTextFieldStackView: UIStackView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     // MARK: - configure
     private func setupStackView() {
         self.axis = .horizontal
         self.spacing = 5
         self.distribution = .fill
         self.alignment = .center
-    }
-    
-    private func configureStackView() {
-        self.addArrangedSubview(UserinputTextField)
-        self.addArrangedSubview(doneButton)
-        self.translatesAutoresizingMaskIntoConstraints = false
+        addArrangedSubview(userInputTextView)
+        addArrangedSubview(doneButton)
+        
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            doneButton.heightAnchor.constraint(equalTo: UserinputTextField.heightAnchor),
-            doneButton.widthAnchor.constraint(equalTo: doneButton.heightAnchor)
+            doneButton.widthAnchor.constraint(equalToConstant: 40),
+            doneButton.heightAnchor.constraint(equalToConstant: 40),
+            doneButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            userInputTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10)
+            
         ])
     }
     

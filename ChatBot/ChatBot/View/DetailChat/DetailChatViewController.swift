@@ -34,6 +34,9 @@ final class DetailChatViewController: UIViewController {
     
     // MARK: - func
     private func configureDetailChatStackView() {
+        if let stackView = detailChatStackView as? DetailTextFieldStackView {
+            stackView.userInputTextView.delegate = self
+        }
         self.view.addSubview(detailChatStackView)
         detailChatStackView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -44,7 +47,7 @@ final class DetailChatViewController: UIViewController {
         ])
     }
     
-   private func setupKeyboardEvent() {
+    private func setupKeyboardEvent() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
@@ -62,10 +65,22 @@ final class DetailChatViewController: UIViewController {
             view.frame.origin.y -= keyboardHeight
         }
     }
-
+    
     @objc private func keyboardWillHide(_ sender: Notification) {
         if view.frame.origin.y != 0 {
             view.frame.origin.y = 0
+        }
+    }
+}
+
+extension DetailChatViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width - 40, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        textView.constraints.forEach { (constraint) in
+            if constraint.firstAttribute == .height {
+                constraint.constant = max(40, min(100, estimatedSize.height))
+            }
         }
     }
 }
